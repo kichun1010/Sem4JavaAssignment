@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="180021833_ITP4507_asm">
+  <ClassDiagramComponents>
+    <Class name="CoffeeCandy" package="" visibility="public" xPosition="1875.0" yPosition="1424.0">
+      <Fields>
+        <Field name="noOfCandy" type="int" visibility="private"/>
+        <Field name="caloriesPerCandy" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="productID"/>
+          <Argument type="int" name="noOfCandy"/>
+          <Argument type="int" name="caloriesPerCandy"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNoOfCandy" returnType="int" visibility="public"/>
+        <Method name="setNoOfCandy" returnType="void" visibility="public">
+          <Argument type="int" name="noOfCandy"/>
+        </Method>
+        <Method name="getCaloriesPerCandy" returnType="int" visibility="public"/>
+        <Method name="setCaloriesPerCandy" returnType="void" visibility="public">
+          <Argument type="int" name="caloriesPerCandy"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeeCandyCommand" package="" visibility="public" xPosition="1157.0" yPosition="576.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="commands" type="Stack&lt;Command&gt;" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="productID" type="int" visibility="package"/>
+        <Field name="p" type="CoffeeProduct" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Scanner" name="sc"/>
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeeCandyFactory" package="" visibility="public" xPosition="2272.0" yPosition="602.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="productID" type="int" visibility="private"/>
+        <Field name="noOfCandy" type="int" visibility="private"/>
+        <Field name="caloriesPerCandy" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="productID"/>
+          <Argument type="int" name="noOfCandy"/>
+          <Argument type="int" name="caloriesPerCandy"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createProduct" returnType="CoffeeProduct" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeePowder" package="" visibility="public" xPosition="2403.0" yPosition="1452.0">
+      <Fields>
+        <Field name="weight" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="productID"/>
+          <Argument type="double" name="weight"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getWeight" returnType="double" visibility="public"/>
+        <Method name="setWeight" returnType="void" visibility="public">
+          <Argument type="double" name="weight"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeePowderCommand" package="" visibility="public" xPosition="1822.0" yPosition="462.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="p" type="CoffeeProduct" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Scanner" name="sc"/>
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeePowderFactory" package="" visibility="public" xPosition="2659.0" yPosition="1231.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="productID" type="int" visibility="private"/>
+        <Field name="weight" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="productID"/>
+          <Argument type="double" name="weight"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createProduct" returnType="CoffeeProduct" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeeProduct" package="" visibility="public" xPosition="2059.0" yPosition="969.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="productID" type="int" visibility="private"/>
+        <Field name="qty" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="productID"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getProductID" returnType="int" visibility="public"/>
+        <Method name="setProductID" returnType="void" visibility="public">
+          <Argument type="int" name="productID"/>
+        </Method>
+        <Method name="getQty" returnType="int" visibility="public"/>
+        <Method name="setQty" returnType="void" visibility="public">
+          <Argument type="int" name="qty"/>
+        </Method>
+        <Method name="searchProduct" returnType="CoffeeProduct" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+          <Argument type="int" name="productID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CoffeeProductCommand" package="" visibility="public" xPosition="1079.0" yPosition="183.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="product" type="Vector&lt;CoffeeProduct&gt;" visibility="package"/>
+        <Field name="com" type="Command" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeeProductFactory" package="" visibility="public" isAbstract="true" xPosition="2751.0" yPosition="915.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createProduct" returnType="CoffeeProduct" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="CollectProductCommand" package="" visibility="public" xPosition="913.0" yPosition="1044.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="product" type="Vector&lt;CoffeeProduct&gt;" visibility="package"/>
+        <Field name="index" type="int" visibility="private"/>
+        <Field name="weight" type="double" visibility="private"/>
+        <Field name="qty" type="int" visibility="package"/>
+        <Field name="p" type="CoffeeProduct" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Scanner" name="sc"/>
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="getRecord" returnType="String" visibility="public">
+          <Argument type="String" name="record"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DeliverProductCommand" package="" visibility="public" xPosition="636.0" yPosition="1392.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="product" type="Vector&lt;CoffeeProduct&gt;" visibility="package"/>
+        <Field name="index" type="int" visibility="private"/>
+        <Field name="weight" type="double" visibility="private"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="qty" type="int" visibility="package"/>
+        <Field name="p" type="CoffeeProduct" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Scanner" name="sc"/>
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="getRecord" returnType="String" visibility="public">
+          <Argument type="String" name="record"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DisplayActionListCommand" package="" visibility="public" xPosition="273.0" yPosition="1120.0">
+      <Fields>
+        <Field name="commands" type="Vector&lt;Command&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Vector&lt;Command&gt;" name="commands"/>
+          <Argument type="Vector&lt;Command&gt;" name="redoList"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RedoCommand" package="" visibility="public" xPosition="157.0" yPosition="822.0">
+      <Fields>
+        <Field name="commands" type="Vector&lt;Command&gt;" visibility="private"/>
+        <Field name="u" type="UndoCommand" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Vector&lt;Command&gt;" name="commands"/>
+          <Argument type="Vector&lt;Command&gt;" name="redoList"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="test" package="" visibility="public" xPosition="708.0" yPosition="360.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UndoCommand" package="" visibility="public" xPosition="157.0" yPosition="481.0">
+      <Fields>
+        <Field name="commands" type="Vector&lt;Command&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Vector&lt;Command&gt;" name="commands"/>
+          <Argument type="Vector&lt;Command&gt;" name="redoList"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ViewProductCommand" package="" visibility="public" xPosition="1346.0" yPosition="870.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="productID" type="int" visibility="private"/>
+        <Field name="product" type="Vector&lt;CoffeeProduct&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Scanner" name="sc"/>
+          <Argument type="Vector&lt;CoffeeProduct&gt;" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="getRecord" returnType="String" visibility="public">
+          <Argument type="String" name="record"/>
+        </Method>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="redo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Command" package="" visibility="public" xPosition="864.0" yPosition="822.0">
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="undo" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="redo" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ViewProductCommand" target="Command"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CollectProductCommand" target="Command"/>
+    <HasRelation name="p" source="CoffeePowderCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CoffeePowderFactory" target="CoffeeProductFactory"/>
+    <UseRelation source="CoffeeProduct" target="CoffeeProduct" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CoffeePowder" target="CoffeeProduct"/>
+    <HasRelation name="commands" source="CoffeeCandyCommand" target="Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="CoffeeCandyFactory" target="CoffeeProduct" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CoffeeCandyFactory" target="CoffeeProductFactory"/>
+    <HasRelation name="u" source="RedoCommand" target="UndoCommand" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CoffeePowderCommand" target="CoffeeProductCommand"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="RedoCommand" target="Command"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CoffeeProductCommand" target="Command"/>
+    <HasRelation name="product" source="DeliverProductCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="DisplayActionListCommand" target="Command"/>
+    <HasRelation name="com" source="CoffeeProductCommand" target="Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="product" source="CollectProductCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="p" source="DeliverProductCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="product" source="CoffeeProductCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="CoffeeProductFactory" target="CoffeeProduct" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CoffeeCandy" target="CoffeeProduct"/>
+    <UseRelation source="CoffeePowderFactory" target="CoffeeProduct" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CoffeeCandyCommand" target="CoffeeProductCommand"/>
+    <HasRelation name="commands" source="RedoCommand" target="Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="product" source="ViewProductCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="commands" source="DisplayActionListCommand" target="Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="p" source="CoffeeCandyCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="UndoCommand" target="Command"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="DeliverProductCommand" target="Command"/>
+    <HasRelation name="p" source="CollectProductCommand" target="CoffeeProduct" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="commands" source="UndoCommand" target="Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
